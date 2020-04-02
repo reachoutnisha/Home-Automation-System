@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const SmartDevice = require('./../../model/smart-device.model')
+const SmartDevice = require('./../../model/smart-device.model');
+const deviceConfig = require('./constants');
 
 // to add the smart device
 
@@ -7,6 +8,23 @@ router.route('/')
     .post(async (req, res) => {
         try {
             const smartdevice = new SmartDevice(req.body);
+
+            let deviceType = smartdevice.device_type;
+
+            let deviceTypes = ['television', 'refrigerator', 'aircondition', 'smartphone', 'camera', 'speaker'];
+
+            if(!deviceTypes.includes(deviceType)){
+                return res.status(404).send({
+                    message: 'Invalid device type'
+                })
+            }
+
+            let deviceInitialConfig = Object.assign({}, deviceConfig[deviceType].initialConfig, req.body.device_properties);
+
+            console.log(deviceInitialConfig);
+
+            smartdevice.device_properties = deviceInitialConfig;
+
             await smartdevice.save();
             res.status(201).send({
                 message: "Device Installed",

@@ -20,7 +20,7 @@ const smartDeviceSchema = new mongoose.Schema({
     device_type : {
         type : String,
         enum : ['television', 'refrigerator', 'aircondition', 'smartphone',
-    'camera']
+    'camera', 'speaker']
     },
     device_status: {
         type: String,
