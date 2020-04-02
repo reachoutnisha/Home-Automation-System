@@ -1,0 +1,190 @@
+{
+	"id": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+	"name": "Home Automation System",
+	"description": "",
+	"order": [
+		"d6b7f964-2871-6bc2-85b6-37b9b100dd38",
+		"cbc7e502-ef37-4369-813f-c7939fdbe89e",
+		"07cd1624-785a-f3a8-c221-62ae876c9b2a",
+		"b0063f8e-a18d-e8a4-12f4-48f37c028db3",
+		"88712047-f75f-5946-f248-f115ea0b1c0e",
+		"a48ba118-6f39-5a99-1384-c1b3c6385994"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1585477034694,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "07cd1624-785a-f3a8-c221-62ae876c9b2a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5500/api/device/5e824ebfbc855c5e74226d3c",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1585598938024,
+			"name": "Remove Smart Device",
+			"description": "This API will remove a Smart device",
+			"collectionId": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "88712047-f75f-5946-f248-f115ea0b1c0e",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5500/api/device/5e8251e1d6a0be5e991b9de5",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get one smart device",
+			"description": "This API will give details of one smart device based on the given ID.",
+			"descriptionFormat": "html",
+			"time": 1585844562721,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a48ba118-6f39-5a99-1384-c1b3c6385994",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5500/api/device/5e823b8d99aa4e5c8f83f017",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Update Smart Device",
+			"description": "This API will update the smart device",
+			"descriptionFormat": "html",
+			"time": 1585846565070,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"name\" : \"Smart TV\"\n}"
+		},
+		{
+			"id": "b0063f8e-a18d-e8a4-12f4-48f37c028db3",
+			"headers": "Content-Type: application/json\ntemperature: 55\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "temperature",
+					"value": "55",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5500/api/device/5e823b8d99aa4e5c8f83f017",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1585844040919,
+			"name": "Perform operation on device",
+			"description": "This API will perform the operation of smart device.",
+			"collectionId": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+			"responses": [],
+			"rawModeData": "{\n\t\t\"temperature\" : \"90\"\n}"
+		},
+		{
+			"id": "cbc7e502-ef37-4369-813f-c7939fdbe89e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5500/api/device",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1585843764925,
+			"name": "Create new smart device",
+			"description": "This API will add a new smart device",
+			"collectionId": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\" : \"Camera\",\n\t\"company_name\" : \"Canon\",\n\t\"description\" : \"Smart Camera\",\n\t\"model_no\" : \"cam-1111-can\",\n\t\"device_type\" : \"camera\",\n\t\"device_features\" : {\"height\": \"20\", \"width\": \"30\"},\n\t\"device_properties\" : {\"turn-on-status\" : \"true\", \"lock-status\" : \"false\"}\n}\n"
+		},
+		{
+			"id": "d6b7f964-2871-6bc2-85b6-37b9b100dd38",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5500/api/device",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6a88ee09-75c1-95a5-bc75-692336ee9847",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get All Smart Devices",
+			"description": "List of all the Smart Devices",
+			"descriptionFormat": "html",
+			"time": 1585479192149,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
